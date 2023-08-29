@@ -88,6 +88,7 @@ The analysis of voice recording features has revealed outliers across various pa
 
 ### 3. Inferential Statistical Analysis
 #### 3.1 Mean Differences and Confidence Intervals
+For a t-test, we have used a 95% confidence level. This means that there is a 95% chance that the true difference in means is within the confidence interval.
 | Feature | Mean Difference | Confidence Interval |
 |---|---|---|
 | MaxPitch | -33.810 | (-44.17996795243055, -23.4409801756263) |
@@ -100,6 +101,8 @@ The analysis of voice recording features has revealed outliers across various pa
 | FractionUnvoicedFrames | -5.069 | (-6.861681929109734, -3.27619271888196) |
 | DegreeVoiceBreaks | -3.803 | (-5.099021178822456, -2.5077541139002353) |
 | Shimmer(APQ11) | 1.772 | (1.2592897573566089, 2.2846059705982564) |
+
+In this study, the mean difference for the MaxPitch feature is -33.810, which means that the mean MaxPitch value for the Parkinson's disease group is 33.810 Hz lower than the mean MaxPitch value for the control group. The confidence interval for this difference is (-44.17996795243055, -23.4409801756263), which means that we can be 95% confident that the true difference in mean MaxPitch values is between -44.17996795243055 Hz and -23.4409801756263 Hz.
 
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allow for intuitive comparisons of feature distributions between the two groups.
 
