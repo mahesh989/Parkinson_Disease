@@ -26,6 +26,7 @@ The dataset was loaded and preprocessed to prepare it for analysis. It consists 
 #### 1.1 Data Dimensions
 
 The dataset has a shape of (1039, 29), indicating 1039 instances and 29 features.
+![Image Alt Text](Dataset_columns.png)
 
 
 
@@ -72,6 +73,7 @@ Our objective was to elucidate disparities in central tendencies and variability
 The project's feature selection reveals significant differences between Parkinson's disease present and absent datasets. The largest difference is in "MaxPitch," with a mean difference of 33.81 and significant deviations in median and standard deviation. The study also shows divergence in severity scores in "UPDRS," speech pattern attributes like "NumPeriods," and significant differences in mean and median in "MeanPitch," "MedianPitch," and "StdDevPitch." These findings provide insights into key differentiating features, guiding the selection of features for effective discrimination between Parkinson's disease cases and healthy subjects in the project.
 
 #### 2.2 Histogram
+![Image Alt Text](Histogram.png)
 
 
 
