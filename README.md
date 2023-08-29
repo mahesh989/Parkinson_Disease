@@ -87,10 +87,23 @@ The analysis of voice recording features has revealed outliers across various pa
 
 
 ### 3. Inferential Statistical Analysis
+#### 3.1 Mean Differences and Confidence Intervals
+| Feature | Mean Difference | Confidence Interval |
+|---|---|---|
+| MaxPitch | -33.810 | (-44.17996795243055, -23.4409801756263) |
+| UPDRS | 24.004 | (23.105359296668126, 24.902347832426287) |
+| NumPeriods | 13.981 | (1.114176699358996, 26.847035691333172) |
+| MeanPitch | -11.558 | (-16.35437150895066, -6.761692949327117) |
+| MedianPitch | -9.447 | (-14.256260205293817, -4.6380662879624275) |
+| StdDevPitch | -8.852 | (-11.987994936130853, -5.715006667544863) |
+| MinPitch | -5.580 | (-9.627504098689435, -1.5327197578393372) |
+| FractionUnvoicedFrames | -5.069 | (-6.861681929109734, -3.27619271888196) |
+| DegreeVoiceBreaks | -3.803 | (-5.099021178822456, -2.5077541139002353) |
+| Shimmer(APQ11) | 1.772 | (1.2592897573566089, 2.2846059705982564) |
 
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allow for intuitive comparisons of feature distributions between the two groups.
 
-4. **Mean Differences and Confidence Intervals**: By computing mean differences and confidence intervals, the project ranked features based on their differentiating potential.
+
 
 5. **Hypothesis Testing**: Z-scores were leveraged for hypothesis testing to ascertain the statistical significance of mean differences.
 
