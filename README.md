@@ -28,6 +28,7 @@ The dataset was loaded and preprocessed to prepare it for analysis. It consists 
 The dataset has a shape of (1039, 29), indicating 1039 instances and 29 features.
 
 
+
 #### 1.2 Data Information
 
 The information about the dataset was obtained using the `.info()` method. It confirmed that the dataset contains no missing values, and all columns have either `float64` or `int64` data types.
@@ -50,13 +51,35 @@ The dataset was divided into two subsets based on the "PD Indicator" column:
 These subsets will be used for comparative analysis and visualization to explore differences between healthy and PD-affected individuals.
 
 
+### 2. Descriptive Analysis
+In this section, we conducted a descriptive analysis of two sub-datasets representing individuals without Parkinson's disease (PD) and those with PD.
+#### 2.1 Central Tendency 
+Our objective was to elucidate disparities in central tendencies and variability between the two groups. We initiated the analysis by calculating summary statistics using the .describe() function for both datasets, excluding irrelevant columns like 'subject_id'. Since there are 29 columns we may not be able to capture all the key details. To get a better glimpse, subsequently, we computed the differences in key statistics, focusing on mean, median, and standard deviation, to reveal insights into the impact of PD on these attributes. 
+
+| Feature                 | Mean Difference | Median Difference | StdDev Difference |
+|-------------------------|-----------------|-------------------|------------------|
+| MaxPitch                | -33.810474      | -14.8815          | -21.029639       |
+| UPDRS                   | 24.003854       | 23.0000           | 14.752265        |
+| NumPeriods              | 13.980606       | 6.5000            | 65.491394        |
+| NumPulses               | 12.222718       | 5.0000            | 64.193786        |
+| MeanPitch               | -11.558032      | -12.0885          | -13.053128       |
+| MedianPitch             | -9.447163       | -9.5840           | -16.707123       |
+| StdDevPitch             | -8.851501       | -4.1670           | -4.050640        |
+| MinPitch                | -5.580112       | -4.4405           | -7.840752        |
+| FractionUnvoicedFrames  | -5.068937       | -6.9150           | -0.342389        |
+| DegreeVoiceBreaks       | -3.803388       | -5.5395           | -2.463653        |
+
+The project's feature selection reveals significant differences between Parkinson's disease present and absent datasets. The largest difference is in "MaxPitch," with a mean difference of 33.81 and significant deviations in median and standard deviation. The study also shows divergence in severity scores in "UPDRS," speech pattern attributes like "NumPeriods," and significant differences in mean and median in "MeanPitch," "MedianPitch," and "StdDevPitch." These findings provide insights into key differentiating features, guiding the selection of features for effective discrimination between Parkinson's disease cases and healthy subjects in the project.
+
+#### 2.2 Histogram
 
 
 
-1. **Data Exploration and Wrangling**: The dataset underwent initial examination, including dimensions, missing values, and duplicates. Basic statistics were obtained to inform subsequent analyses.
 
-2. **Descriptive and Inferential Analysis**: To discern meaningful features, descriptive statistics were calculated for healthy and PD-affected groups. Inferential analyses, notably t-tests, facilitated the identification of statistically significant differences.
 
+
+
+2. **Descriptive 
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allowed for intuitive comparisons of feature distributions between the two groups.
 
 4. **Mean Differences and Confidence Intervals**: By computing mean differences and confidence intervals, the project ranked features based on their differentiating potential.
