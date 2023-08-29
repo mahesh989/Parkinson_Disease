@@ -73,16 +73,12 @@ Our objective was to elucidate disparities in central tendencies and variability
 The project's feature selection reveals significant differences between Parkinson's disease present and absent datasets. The largest difference is in "MaxPitch," with a mean difference of 33.81 and significant deviations in median and standard deviation. The study also shows divergence in severity scores in "UPDRS," speech pattern attributes like "NumPeriods," and significant differences in mean and median in "MeanPitch," "MedianPitch," and "StdDevPitch." These findings provide insights into key differentiating features, guiding the selection of features for effective discrimination between Parkinson's disease cases and healthy subjects in the project.
 
 #### 2.2 Histogram
+Next, we generate side-by-side histograms to compare the distribution of numeric features between healthy and unhealthy individuals in two DataFrames (df1 for healthy and df2 for unhealthy displaying both distributions in different colours with hatch patterns. This visualization helps to easily observe differences in feature distributions between the two groups. Make sure to have the required libraries installed and adjust the code to match your DataFrame structure and data.
 ![Image Alt Text](Histogram.png)
-
-
-
-
-
-
+The histograms unveil the distribution characteristics of diverse features within the dataset. For instance, the attributes related to jitter measurements, such as 'Jitter(%)', 'Jitter(Abs)', and 'Jitter(RAP)', display positively skewed distributions suggesting longer tails toward higher values. The 'Shimmer' features, which gauge voice variability, exhibit varying degrees of spread and skewness, notably 'Shimmer(APQ5)'. 'Harmonicity' maintains a mean of around 0.85 and a standard deviation of 0.09, reflecting its relatively consistent distribution. 'NHR' (noise-to-harmonics ratio) possesses a positively skewed distribution indicating data skewness towards higher values. Features like 'NumPulses' and 'NumPeriods' are strongly positively skewed, indicative of potential outliers or variability. Meanwhile, attributes such as 'MeanPeriod' and 'StdDevPeriod' have distributions centred near zero, confirming their low variation. 'UPDRS', possibly denoting Parkinson's disease severity, demonstrates a right-skewed distribution.
 
 2. **Descriptive 
-3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allowed for intuitive comparisons of feature distributions between the two groups.
+3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allowing for intuitive comparisons of feature distributions between the two groups.
 
 4. **Mean Differences and Confidence Intervals**: By computing mean differences and confidence intervals, the project ranked features based on their differentiating potential.
 
