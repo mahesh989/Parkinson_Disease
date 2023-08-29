@@ -19,6 +19,39 @@ The project utilizes the `po1_data.txt` dataset, comprising voice samples collec
 ## Key Steps and Insights
 
 The project unfolds through a series of steps:
+### 1. Data Loading and Preprocessing
+
+The dataset was loaded and preprocessed to prepare it for analysis. It consists of 1039 entries and 29 columns, each representing different acoustic features extracted from voice recordings. The data underwent the following steps:
+
+#### 1.1 Data Dimensions
+
+The dataset has a shape of (1039, 29), indicating 1039 instances and 29 features.
+
+
+#### 1.2 Data Information
+
+The information about the dataset was obtained using the `.info()` method. It confirmed that the dataset contains no missing values, and all columns have either `float64` or `int64` data types.
+
+#### 1.3 Duplicate Rows
+
+Duplicate rows were checked using the `.duplicated()` method. No duplicate rows were found in the dataset.
+
+#### 1.4 Column Renaming
+
+To improve clarity, the column names were updated with more meaningful labels. The new column names provide insights into the acoustic attributes they represent.
+
+#### 1.5 Data Division
+
+The dataset was divided into two subsets based on the "PD Indicator" column:
+
+- `df1`: Voice samples from individuals without PD (Healthy). It contains 520 instances and 29 features.
+- `df2`: Voice samples from individuals with PD (Affected). It contains 519 instances and 29 features.
+
+These subsets will be used for comparative analysis and visualization to explore differences between healthy and PD-affected individuals.
+
+
+
+
 
 1. **Data Exploration and Wrangling**: The dataset underwent initial examination, including dimensions, missing values, and duplicates. Basic statistics were obtained to inform subsequent analyses.
 
