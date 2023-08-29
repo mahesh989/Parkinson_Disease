@@ -104,6 +104,49 @@ For a t-test, we have used a 95% confidence level. This means that there is a 95
 
 In this study, the mean difference for the MaxPitch feature is -33.810, which means that the mean MaxPitch value for the Parkinson's disease group is 33.810 Hz lower than the mean MaxPitch value for the control group. The confidence interval for this difference is (-44.17996795243055, -23.4409801756263), which means that we can be 95% confident that the true difference in mean MaxPitch values is between -44.17996795243055 Hz and -23.4409801756263 Hz.
 
+#### 3.2 Hypothesis Testing
+In the conducted hypothesis testing analysis, we explored the differences in various acoustic features, pitch-related measures, and clinical scores between healthy and unhealthy individuals. The findings provided compelling evidence of significant distinctions between the two groups across multiple dimensions.
+
+Fail to reject H₀:
+|      Feature      | Z-Score | Critical Z-Value |      Result      |
+|-------------------|---------|------------------|------------------|
+|        HNR        |  1.298  |      2.576       | Fail to reject H₀|
+|     MinPitch      | -1.913  |      2.576       | Fail to reject H₀|
+|        NHR        | -2.436  |      2.576       | Fail to reject H₀|
+|    NumPeriods     |  1.508  |      2.576       | Fail to reject H₀|
+|     NumPulses     |  1.312  |      2.576       | Fail to reject H₀|
+| NumVoiceBreaks    | -2.559  |      2.576       | Fail to reject H₀|
+|    Shimmer(%)     |  0.318  |      2.576       | Fail to reject H₀|
+| Shimmer(APQ3)     | -0.573  |      2.576       | Fail to reject H₀|
+| Shimmer(APQ5)     | -0.707  |      2.576       | Fail to reject H₀|
+|  Shimmer(Abs)     |  0.908  |      2.576       | Fail to reject H₀|
+|   Shimmer(DD)     | -0.573  |      2.576       | Fail to reject H₀|
+|  StdDevPeriod     | -1.879  |      2.576       | Fail to reject H₀|
+
+Features where the Null Hypothesis (H₀) is Not Rejected: In contrast, certain features did not surpass the critical z-values, indicating that there was insufficient evidence to claim significant differences between healthy and unhealthy individuals for these specific aspects. These results suggest that, at the given significance level, these features did not exhibit substantial disparities. While the differences were not statistically significant, these features still contribute to a holistic understanding of the comparison between the two groups.
+
+
+Reject H₀:
+|            Feature           | Z-Score | Critical Z-Value |   Result    |
+|-------------------------------|---------|------------------|-------------|
+|     DegreeVoiceBreaks         |  -4.073 |        2.576     | Reject H₀  |
+| FractionUnvoicedFrames        |  -3.923 |        2.576     | Reject H₀  |
+|        Harmonicity            |   2.601 |        2.576     | Reject H₀  |
+|          Jitter(%)            |   3.180 |        2.576     | Reject H₀  |
+|        Jitter(Abs)            |   5.482 |        2.576     | Reject H₀  |
+|        Jitter(DDP)            |   3.615 |        2.576     | Reject H₀  |
+|       Jitter(PPQ5)            |   3.613 |        2.576     | Reject H₀  |
+|        Jitter(RAP)            |   3.615 |        2.576     | Reject H₀  |
+|           MaxPitch            |  -4.524 |        2.576     | Reject H₀  |
+|         MeanPeriod            |   2.651 |        2.576     | Reject H₀  |
+|          MeanPitch            |  -3.344 |        2.576     | Reject H₀  |
+|        MedianPitch            |  -2.726 |        2.576     | Reject H₀  |
+|     Shimmer(APQ11)            |   4.796 |        2.576     | Reject H₀  |
+|        StdDevPitch            |  -3.916 |        2.576     | Reject H₀  |
+|              UPDRS            |  37.069 |        2.576     | Reject H₀  |
+
+Features where the Null Hypothesis (H₀) is Rejected: These features exhibited z-scores that surpassed the critical z-values, indicating substantial differences between healthy and unhealthy individuals. For instance, "DegreeVoiceBreaks" displayed a z-score of -4.073, well beyond the critical value of 2.576, leading to the rejection of the null hypothesis. Similarly, "FractionUnvoicedFrames" showcased a z-score of -3.923, confirming a notable distinction between the groups. Furthermore, features like "Harmonicity" presented a z-score of 2.601, reinforcing the rejection of the null hypothesis and emphasizing the divergence between the two groups. Additional measures, including various "Jitter" metrics, "MaxPitch," "MeanPeriod," "MeanPitch," "MedianPitch," "Shimmer(APQ11)," "StdDevPitch," and "UPDRS" scores, all exhibited z-scores that significantly exceeded the critical values, reinforcing the significance of these differences.
+
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allow for intuitive comparisons of feature distributions between the two groups.
 
 
