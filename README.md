@@ -85,6 +85,9 @@ The histograms unveil the distribution characteristics of diverse features withi
 
 The analysis of voice recording features has revealed outliers across various parameters, such as pitch variations, vocal intensity shifts, harmonics-to-noise ratios, and temporal patterns. These outliers hold potential significance, indicating instances of unusual pitch modulation, abrupt changes in vocal intensity, deviations in harmonics, or variations in speech pace. Their interpretation is context-dependent and necessitates domain expertise for a comprehensive understanding of their implications, whether they signify unique vocal events, data collection errors, or valuable insights. Careful consideration should be given to the decision to handle these outliers, as they offer valuable cues about the underlying vocal characteristics and behaviours within the recordings.
 
+
+### 3. Inferential Statistical Analysis
+
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allow for intuitive comparisons of feature distributions between the two groups.
 
 4. **Mean Differences and Confidence Intervals**: By computing mean differences and confidence intervals, the project ranked features based on their differentiating potential.
