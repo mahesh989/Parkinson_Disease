@@ -147,6 +147,9 @@ Reject H₀:
 
 Features where the Null Hypothesis (H₀) is Rejected: These features exhibited z-scores that surpassed the critical z-values, indicating substantial differences between healthy and unhealthy individuals. For instance, "DegreeVoiceBreaks" displayed a z-score of -4.073, well beyond the critical value of 2.576, leading to the rejection of the null hypothesis. Similarly, "FractionUnvoicedFrames" showcased a z-score of -3.923, confirming a notable distinction between the groups. Furthermore, features like "Harmonicity" presented a z-score of 2.601, reinforcing the rejection of the null hypothesis and emphasizing the divergence between the two groups. Additional measures, including various "Jitter" metrics, "MaxPitch," "MeanPeriod," "MeanPitch," "MedianPitch," "Shimmer(APQ11)," "StdDevPitch," and "UPDRS" scores, all exhibited z-scores that significantly exceeded the critical values, reinforcing the significance of these differences.
 
+### 4. Features selection and Feature Engineering
+
+#### 4.1
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allow for intuitive comparisons of feature distributions between the two groups.
 
 
