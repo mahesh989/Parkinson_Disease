@@ -149,7 +149,29 @@ Features where the Null Hypothesis (H₀) is Rejected: These features exhibited 
 
 ### 4. Features selection and Feature Engineering
 
-#### 4.1
+#### 4.1 Selecting the appropriate columns 
+Our feature selection process involves a systematic combination of hypothesis testing and feature sorting to identify the most impactful attributes for our analysis. Initially, we perform hypothesis testing and save the results of either rejecting or failing to reject the null hypothesis in the 'reject_results.csv' file. Subsequently, we sort the features based on mean differences and confidence intervals, preserving these results in the 'sorted_results.csv' file. By utilizing NumPy's np.intersect1d(), we pinpoint the features that consistently exhibit significance through hypothesis testing and show substantial differences based on sorting. These common features become our selected subset for further analysis. This approach ensures that we emphasize attributes that consistently demonstrate importance and distinct characteristics, streamlining our analytical efforts. Ultimately, this strategy enhances the precision and robustness of our analysis by focusing our attention on attributes that consistently hold significance across different analytical perspectives.
+
+Our feature selection process identifies the following key attributes for further analysis:
+
+- DegreeVoiceBreaks
+- FractionUnvoicedFrames
+- MaxPitch
+- MeanPitch
+- MedianPitch
+- Shimmer(APQ11)
+- StdDevPitch
+- UPDRS
+
+These features demonstrate both statistical significance and substantial differences, making them ideal candidates for driving insights in our analysis.
+
+
+
+
+
+
+
+
 3. **Visual Comparison**: Visualizations, including side-by-side histograms and box plots, allow for intuitive comparisons of feature distributions between the two groups.
 
 
