@@ -168,12 +168,17 @@ Our feature selection process identifies the following key attributes which are 
 ### Taking Final Decision
 In this step, we have used our domain knowledge and instincts to select the final features. As we can see, during the selecting feature process, there are central tendencies like Mean, Median and SD. Since all these are relevant to one another, we will select one of them. By going through the Histogram and Mean differences calculation, we were able to decide to exclude columns MeanPitch and MedianPitch by recovering StdDevPitch. It has a low gap of confidence interval and as we can see from the histogram, people with PD had SD fall in the low margin i.e. 90% of data lies within values of 25.
 
+UPDRS is an undeniable feature that is directly related to differentiating healthy and unhealthy people which has a narrow confidence interval as well as features in Histogram. 
+
+
 
 ## Implications and Future Directions
 
 The project's analyses and visualizations unveiled notable discrepancies in acoustic features between healthy individuals and those with PD. These findings hold promise for the advancement of a non-invasive diagnostic instrument for PD, potentially enabling timelier interventions and improved patient outcomes.
 
-Future research avenues could involve larger datasets, integration of machine learning techniques for predictive modeling, and clinical validation to assess the reliability of identified acoustic markers.
+Future research avenues could involve larger datasets, integration of machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified acoustic markers.
+
+We exclude FractionUnvoicedFrames and DegreeVoiceBreaks as frequency for different values as observed in the Histogram can contradict our result as they seem fairly similar. 
 
 ## Conclusion
 
