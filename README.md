@@ -147,7 +147,7 @@ Reject H₀:
 
 Features where the Null Hypothesis (H₀) is Rejected: These features exhibited z-scores that surpassed the critical z-values, indicating substantial differences between healthy and unhealthy individuals. For instance, "DegreeVoiceBreaks" displayed a z-score of -4.073, well beyond the critical value of 2.576, leading to the rejection of the null hypothesis. Similarly, "FractionUnvoicedFrames" showcased a z-score of -3.923, confirming a notable distinction between the groups. Furthermore, features like "Harmonicity" presented a z-score of 2.601, reinforcing the rejection of the null hypothesis and emphasizing the divergence between the two groups. Additional measures, including various "Jitter" metrics, "MaxPitch," "MeanPeriod," "MeanPitch," "MedianPitch," "Shimmer(APQ11)," "StdDevPitch," and "UPDRS" scores, all exhibited z-scores that significantly exceeded the critical values, reinforcing the significance of these differences.
 
-### 4. Features selection and Feature Engineering
+### 4. Features selection
 
 Our feature selection process involves a systematic combination of hypothesis testing and feature sorting to identify the most impactful attributes for our analysis. Initially, we perform hypothesis testing and save the results of either rejecting or failing to reject the null hypothesis in the 'reject_results.csv' file. Subsequently, we sort the features based on mean differences and confidence intervals, preserving these results in the 'sorted_results.csv' file. By utilizing NumPy's np.intersect1d(), we pinpoint the features that consistently exhibit significance through hypothesis testing and show substantial differences based on sorting. These common features become our selected subset for further analysis. This approach ensures that we emphasize attributes that consistently demonstrate importance and distinct characteristics, streamlining our analytical efforts. Ultimately, this strategy enhances the precision and robustness of our analysis by focusing our attention on attributes that consistently hold significance across different analytical perspectives.
 
@@ -168,11 +168,19 @@ Our feature selection process identifies the following key attributes which are 
 ### Taking Final Decision
 In this step, we have used our domain knowledge and instincts to select the final features. As we can see, during the selecting feature process, there are central tendencies like Mean, Median and SD. Since all these are relevant to one another, we will select one of them. By going through the Histogram and Mean differences calculation, we were able to decide to exclude columns MeanPitch and MedianPitch by recovering StdDevPitch. It has a low gap of confidence interval and as we can see from the histogram, people with PD had SD fall in the low margin i.e. 90% of data lies within values of 25.
 
-UPDRS is an undeniable feature that is directly related to differentiating healthy and unhealthy people which has a narrow confidence interval as well as features in Histogram. 
+UPDRS is an undeniable feature that is directly related to differentiating healthy and unhealthy people which has a narrow confidence interval as well as features in Histogram. We will keep MaxPitch as well because it has the highest mean differences out of all the features even though the confidence interval is large. 
 
 We exclude FractionUnvoicedFrames and DegreeVoiceBreaks as frequency for different values as observed in the Histogram can contradict our result as they seem fairly similar.  
 
 As supported by hypothesis testing, Jitter(%), Jitter(Abs), Jitter(DDP), Jitter(PPQ5) and Jitter(RAP) are interesting features that can help to detect PD. By looking into Histograms, confidence intervals and mean differences we decided to choose Jitter(%) as the next feature. Some of the jitter features have 0 mean differences and some have fairly low ones. It was the choice between Jitter(%) and Jitter(DDP) that had significant mean differences. By looking into the Histogram, we decided to choose Jitter(%) as we believe this will help to detect PD with more certainty. 
+
+
+The final columns after all the analysis are;
+- MaxPitch
+- StdDevPitch
+- UPDRS
+- Jitter(%)
+- PD indicator
 
 
 
