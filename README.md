@@ -165,7 +165,7 @@ Our feature selection process identifies the following key attributes which are 
 ![Image Alt Text](Mean_Difference_CI.png)
 
 
-### Taking Final Decision
+## Taking Final Decision
 In this step, we have used our domain knowledge and instincts to select the final features. As we can see, during the selecting feature process, there are central tendencies like Mean, Median and SD. Since all these are relevant to one another, we will select one of them. By going through the Histogram and Mean differences calculation, we were able to decide to exclude columns MeanPitch and MedianPitch by recovering StdDevPitch. It has a low gap of confidence interval and as we can see from the histogram, people with PD had SD fall in the low margin i.e. 90% of data lies within values of 25.
 
 UPDRS is an undeniable feature that is directly related to differentiating healthy and unhealthy people which has a narrow confidence interval as well as features in Histogram. We will keep MaxPitch as well because it has the highest mean differences out of all the features even though the confidence interval is large. 
@@ -191,10 +191,10 @@ Next, we can use machine learning techniques for predictive modelling, and clini
 
 
 ## Conclusion
+In this project, we systematically analyzed voice sample data to identify distinct acoustic markers for diagnosing Parkinson's Disease (PD), utilizing descriptive analyses, inferential statistical tests, and domain expertise. Through careful selection guided by hypothesis testing, mean difference calculations, and feature distribution visualizations, we determined that MaxPitch, StdDevPitch, UPDRS, Jitter(%), and the PD indicator exhibited consistent significance in distinguishing PD-affected individuals from healthy ones. This selection holds promise for the development of a non-invasive diagnostic tool, and while further validation and machine learning modelling are necessary, our project highlights the potential of voice analysis as a valuable avenue for early PD detection.
 
 
 ## References
-
 [^1^]: National Institute of Neurological Disorders and Stroke. (2023). Parkinson's Disease Information Page. [https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease](https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease)
 [^2^]: Parkinson's Foundation. (2023). Notable Figures. [https://www.parkinson.org/understanding-parkinsons/statistics/notable-figures](https://www.parkinson.org/understanding-parkinsons/statistics/notable-figures)
 [^3^]: Sakar, B.E. et al. (2013). [https://ieeexplore.ieee.org/abstract/document/6451090](https://ieeexplore.ieee.org/abstract/document/6451090) and [https://www.fon.hum.uva.nl/praat/](https://www.fon.hum.uva.nl/praat/)
