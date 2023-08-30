@@ -166,6 +166,7 @@ Our feature selection process identifies the following key attributes which are 
 
 
 ### Taking Final Decision
+In this step, we have used our domain knowledge and instincts to select the final features. As we can see, during the selecting feature process, there are central tendencies like Mean, Median and SD. Since all these are relevant to one another, we will select one of them. By going through the Histogram and Mean differences calculation, we were able to decide to exclude columns MeanPitch and MedianPitch by recovering StdDevPitch. It has a low gap of confidence interval and as we can see from the histogram, people with PD had SD fall in the low margin i.e. 90% of data lies within values of 25.
 
 
 ## Implications and Future Directions
