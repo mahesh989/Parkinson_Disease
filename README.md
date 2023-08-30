@@ -170,6 +170,10 @@ In this step, we have used our domain knowledge and instincts to select the fina
 
 UPDRS is an undeniable feature that is directly related to differentiating healthy and unhealthy people which has a narrow confidence interval as well as features in Histogram. 
 
+We exclude FractionUnvoicedFrames and DegreeVoiceBreaks as frequency for different values as observed in the Histogram can contradict our result as they seem fairly similar.  
+
+As supported by hypothesis testing, Jitter(%), Jitter(Abs), Jitter(DDP), Jitter(PPQ5) and Jitter(RAP) are interesting features that can help to detect PD. By looking into Histograms, confidence intervals and mean differences we decided to choose Jitter(%) as the next feature. Some of the jitter features have 0 mean differences and some have fairly low ones. It was the choice between Jitter(%) and Jitter(DDP) that had significant mean differences. By looking into the Histogram, we decided to choose Jitter(%) as we believe this will help to detect PD with more certainty. 
+
 
 
 ## Implications and Future Directions
@@ -178,7 +182,7 @@ The project's analyses and visualizations unveiled notable discrepancies in acou
 
 Future research avenues could involve larger datasets, integration of machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified acoustic markers.
 
-We exclude FractionUnvoicedFrames and DegreeVoiceBreaks as frequency for different values as observed in the Histogram can contradict our result as they seem fairly similar. 
+
 
 ## Conclusion
 
