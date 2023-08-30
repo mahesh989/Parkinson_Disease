@@ -186,13 +186,10 @@ The final columns after all the analysis are;
 - Jitter(%)
 - PD indicator
 - 
-Next, we can use machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified PD to help the patients in early phases. 
-
-
+Next, we can use machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified PD to help the patients in early phases.  Also, We can predict the motor and the total UPDRS scores assigned by a physician to people with Parkinson’s Disease.
 
 ## Conclusion
 In this project, we systematically analyzed voice sample data to identify distinct acoustic markers for diagnosing Parkinson's Disease (PD), utilizing descriptive analyses, inferential statistical tests, and domain expertise. Through careful selection guided by hypothesis testing, mean difference calculations, and feature distribution visualizations, we determined that MaxPitch, StdDevPitch, UPDRS, Jitter(%), and the PD indicator exhibited consistent significance in distinguishing PD-affected individuals from healthy ones. This selection holds promise for the development of a non-invasive diagnostic tool, and while further validation and machine learning modelling are necessary, our project highlights the potential of voice analysis as a valuable avenue for early PD detection.
-
 
 ## References
 [^1^]: National Institute of Neurological Disorders and Stroke. (2023). Parkinson's Disease Information Page. [https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease](https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease)
