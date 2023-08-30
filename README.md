@@ -174,6 +174,10 @@ We exclude FractionUnvoicedFrames and DegreeVoiceBreaks as frequency for differe
 
 As supported by hypothesis testing, Jitter(%), Jitter(Abs), Jitter(DDP), Jitter(PPQ5) and Jitter(RAP) are interesting features that can help to detect PD. By looking into Histograms, confidence intervals and mean differences we decided to choose Jitter(%) as the next feature. Some of the jitter features have 0 mean differences and some have fairly low ones. It was the choice between Jitter(%) and Jitter(DDP) that had significant mean differences. By looking into the Histogram, we decided to choose Jitter(%) as we believe this will help to detect PD with more certainty. 
 
+## Implications and Future Directions
+
+The project's analyses and visualizations unveiled notable discrepancies in acoustic features between healthy individuals and those with PD. These findings hold promise for the advancement of a non-invasive diagnostic instrument for PD, potentially enabling timelier interventions and improved patient outcomes.
+
 
 The final columns after all the analysis are;
 - MaxPitch
@@ -181,20 +185,13 @@ The final columns after all the analysis are;
 - UPDRS
 - Jitter(%)
 - PD indicator
-
-
-
-## Implications and Future Directions
-
-The project's analyses and visualizations unveiled notable discrepancies in acoustic features between healthy individuals and those with PD. These findings hold promise for the advancement of a non-invasive diagnostic instrument for PD, potentially enabling timelier interventions and improved patient outcomes.
-
-Future research avenues could involve larger datasets, integration of machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified acoustic markers.
+- 
+Next, we can use machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified PD to help the patients in early phases. 
 
 
 
 ## Conclusion
 
-In the medical landscape, this project showcases the potency of data-driven insights by harnessing voice sample data to diagnose PD. Through rigorous statistical analyses and insightful visualizations, key acoustic features were illuminated, contributing to the quest for an accurate, non-invasive, and accessible diagnostic tool for Parkinson's Disease.
 
 ## References
 
