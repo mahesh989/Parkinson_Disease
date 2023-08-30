@@ -151,7 +151,7 @@ Features where the Null Hypothesis (H₀) is Rejected: These features exhibited 
 
 Our feature selection process involves a systematic combination of hypothesis testing and feature sorting to identify the most impactful attributes for our analysis. Initially, we perform hypothesis testing and save the results of either rejecting or failing to reject the null hypothesis in the 'reject_results.csv' file. Subsequently, we sort the features based on mean differences and confidence intervals, preserving these results in the 'sorted_results.csv' file. By utilizing NumPy's np.intersect1d(), we pinpoint the features that consistently exhibit significance through hypothesis testing and show substantial differences based on sorting. These common features become our selected subset for further analysis. This approach ensures that we emphasize attributes that consistently demonstrate importance and distinct characteristics, streamlining our analytical efforts. Ultimately, this strategy enhances the precision and robustness of our analysis by focusing our attention on attributes that consistently hold significance across different analytical perspectives.
 
-Our feature selection process identifies the following key attributes for further analysis:
+Our feature selection process identifies the following key attributes which are common features between hypothesis testing with null hypothesis rejection and feature sorting (with top 10 mean differences)
 
 - DegreeVoiceBreaks
 - FractionUnvoicedFrames
