@@ -43,6 +43,7 @@ Duplicate rows were checked using the `.duplicated()` method. No duplicate rows 
 To improve clarity, the column names were updated with more meaningful labels. The new column names provide insights into the acoustic attributes they represent.
 
 #### 1.5 Data Division
+![Image Alt Text](Distribution_.png)
 
 The dataset was divided into two subsets based on the "PD Indicator" column:
 
