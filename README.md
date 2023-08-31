@@ -14,7 +14,7 @@ This project focuses on leveraging voice sample data analysis as a potential non
 
 ## Dataset and Methodology
 
-The project utilizes the `po1_data.txt` dataset, comprising voice samples collected from both PD patients and healthy individuals. Each participant recorded 26 voice samples, encompassing sustained vowels, numbers, words, and sentences. Acoustic features extracted using Praat, a free acoustic analysis software[^3^], provide the foundation for subsequent analyses.
+The project utilizes the `po1_data.txt` dataset, comprising voice samples collected from both PD patients and healthy individuals. Each participant recorded 26 voice samples, encompassing sustained vowels, numbers, words, and sentences. Acoustic features extracted using Praat, a free acoustic analysis software[^4^], provide the foundation for subsequent analyses.
 
 ## Key Steps and Insights
 
@@ -194,4 +194,5 @@ In this project, we systematically analyzed voice sample data to identify distin
 ## References
 [^1^]: National Institute of Neurological Disorders and Stroke. (2023). Parkinson's Disease Information Page. [https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease](https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease)
 [^2^]: Parkinson's Foundation. (2023). Notable Figures. [https://www.parkinson.org/understanding-parkinsons/statistics/notable-figures](https://www.parkinson.org/understanding-parkinsons/statistics/notable-figures)
-[^3^]: Sakar, B.E. et al. (2013). [https://ieeexplore.ieee.org/abstract/document/6451090](https://ieeexplore.ieee.org/abstract/document/6451090) and [https://www.fon.hum.uva.nl/praat/](https://www.fon.hum.uva.nl/praat/)
+[^3^]: Sakar, B.E. et al. (2013). [https://ieeexplore.ieee.org/abstract/document/6451090](https://ieeexplore.ieee.org/abstract/document/6451090)  
+[^4^]: Boersma, P., & Weenink, D. (2021). Praat: Doing phonetics by computer (Version 3) [Computer software]. (https://www.fon.hum.uva.nl/praat/)
