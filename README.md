@@ -43,9 +43,8 @@ Duplicate rows were checked using the `.duplicated()` method. No duplicate rows 
 To improve clarity, the column names were updated with more meaningful labels. The new column names provide insights into the acoustic attributes they represent.
 
 #### 1.5 Data Division
-![Image Alt Text](Distribution_.png)
-
-The dataset was divided into two subsets based on the "PD Indicator" column:
+In this dataset, PD indicator is a categorical column representing people with or without Parkinson disease.  So,  the first thing we did is divide the dataset into two data subset: without Parkinson disease and with Parkinson disease.  As seen from the figure, number of people with or without PD are nearly same in this sample set.
+![Image Alt Text](Distribution_PD_Indicator_.png)
 
 - `df1`: Voice samples from individuals without PD (Healthy). It contains 520 instances and 29 features.
 - `df2`: Voice samples from individuals with PD (Affected). It contains 519 instances and 29 features.
