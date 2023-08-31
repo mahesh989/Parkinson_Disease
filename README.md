@@ -18,7 +18,7 @@ The project utilizes the `po1_data.txt` dataset, comprising voice samples collec
 
 ## Key Steps and Insights
 
-The project unfolds through a series of steps:
+The project unfolds through a series of steps. Check the Python code name named Parkinson_Disease_Feature_Selection.py
 ### 1. Data Loading and Preprocessing
 
 The dataset was loaded and preprocessed to prepare it for analysis. It consists of 1039 entries and 29 columns, each representing different acoustic features extracted from voice recordings. The data underwent the following steps:
