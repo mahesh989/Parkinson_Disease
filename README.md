@@ -4,24 +4,25 @@
 
 Parkinson's Disease (PD) stands as a formidable challenge in the realm of neurological disorders. A progressive movement disorder affecting the nervous system, PD manifests through debilitating symptoms such as tremors, rigidity, bradykinesia, and postural instability[^1^]. While notable figures like Muhammad Ali, Michael J. Fox, and Pope John Paul II have grappled with PD, there remains no known cure for this affliction[^2^].
 
-Diagnosing PD presents intricate challenges due to the lack of specific diagnostic tests and the invasive nature of some existing procedures. Blood tests, laboratory assessments, and brain scans are used to exclude other potential disorders, but these approaches often involve rigorous processes that can add to the distress of those affected by PD[^1^].
+Due to the absence of precise diagnostic tests and the invasiveness of several current methods, diagnosing PD poses complex difficulties. Blood tests, laboratory evaluations, and brain scans are used to rule out other probable diseases, although these methods sometimes include arduous procedures that might worsen the suffering of PD patients[1].
 
-This project embarks on an exploration of a non-invasive diagnostic avenue using voice sample data analysis. The aspiration is to harness distinctive features in the acoustic properties of individuals' voices to discern between those affected by PD and those who are not. By probing these acoustic markers, the project aims to contribute to the development of an accessible and reliable diagnostic tool for PD.
+Using speech sample data processing, this research explores a non-invasive diagnosis route. The goal is to distinguish between those who have PD and those who do not by using specific characteristics in the acoustic qualities of their voices. The initiative intends to contribute to the creation of a user-friendly and accurate PD diagnosis tool by examining these auditory indicators.
 
 ## Project Objective
 
-This project focuses on leveraging voice sample data analysis as a potential non-invasive method for diagnosing PD. The goal is to identify specific acoustic markers within voice samples that can distinguish between individuals with PD and those without the condition. By analyzing a set of acoustic features extracted from voice recordings, the project aims to contribute to the development of an accessible and reliable diagnostic tool for PD.
+The goal of this study is to develop speech sample data analysis as a viable non-invasive PD diagnosis technique. To discriminate between people with PD and those who do not have the disorder, particular acoustic indicators within speech samples have to be found. The study intends to contribute to the creation of a usable and trustworthy PD diagnosis tool by investigating a set of acoustic properties collected from speech recordings.
+
 
 ## Dataset and Methodology
 
-The project utilizes the `po1_data.txt` dataset, comprising voice samples collected from both PD patients and healthy individuals. Each participant recorded 26 voice samples, encompassing sustained vowels, numbers, words, and sentences. Acoustic features extracted using Praat, a free acoustic analysis software[^4^], provide the foundation for subsequent analyses.
+The 'po1_data.txt' dataset, which includes speech samples taken from both PD patients and healthy people, is used in this study. Each participant recorded 26 speech samples, including words, phrases, sustained vowels, and numerals. The basis for the following investigations is laid out by acoustic characteristics that were retrieved using Praat, a free acoustic analysis program[4].
 
 ## Key Steps and Insights
 
 The project unfolds through a series of steps. Check the Python code name named Parkinson_Disease_Feature_Selection.py
 ### 1. Data Loading and Preprocessing
 
-The dataset was loaded and preprocessed to prepare it for analysis. It consists of 1039 entries and 29 columns, each representing different acoustic features extracted from voice recordings. The data underwent the following steps:
+In order to get the dataset ready for analysis, it was loaded and preprocessed. It has 1039 entries and 29 columns with various acoustic elements taken from voice recordings for each entry. The data passed through the following processes:
 
 #### 1.1 Data Dimensions
 
@@ -43,7 +44,8 @@ Duplicate rows were checked using the `.duplicated()` method. No duplicate rows 
 To improve clarity, the column names were updated with more meaningful labels. The new column names provide insights into the acoustic attributes they represent.
 
 #### 1.5 Data Division
-In this dataset, PD indicator is a categorical column representing people with or without Parkinson disease.  So,  the first thing we did is divide the dataset into two data subset: without Parkinson disease and with Parkinson disease.  As seen from the figure, number of people with or without PD are nearly same in this sample set.
+The categorical column PD indication in this dataset denotes individuals with or without Parkinson disease.  As a result, we started by splitting the dataset into two data subsets: those without Parkinson's disease and those with it.  The chart shows that in this sample set, the proportion of persons with and without PD is virtually equal.
+
 ![Image Alt Text](Distribution_PD_Indicator.png)
 
 - `df1`: Voice samples from individuals without PD (Healthy). It contains 520 instances and 29 features.
@@ -145,16 +147,13 @@ Reject H₀:
 |        StdDevPitch            |  -3.916 |        2.576     | Reject H₀  |
 |              UPDRS            |  37.069 |        2.576     | Reject H₀  |
 
-Features where the Null Hypothesis (H₀) is Rejected: These features exhibited z-scores that surpassed the critical z-values, indicating substantial differences between healthy and unhealthy individuals. For instance, "DegreeVoiceBreaks" displayed a z-score of -4.073, well beyond the critical value of 2.576, leading to the rejection of the null hypothesis. Similarly, "FractionUnvoicedFrames" showcased a z-score of -3.923, confirming a notable distinction between the groups. Additionally, attributes like "Harmonicity" had a z-score of 2.601, highlighting the divergence between the two groups and supporting the rejection of the null hypothesis. Additional metrics, such as different "Jitter" metrics, "MaxPitch," "MeanPeriod," "MeanPitch," "MedianPitch," "Shimmer(APQ11)," "StdDevPitch," and "UPDRS" scores, all showed z-scores that markedly surpassed the essential values, highlighting the importance of these variances.
+Features that reject the null hypothesis (H0) These traits showed z-scores that were higher than the necessary z-values, showing major distinctions between healthy and sick people. For instance, "DegreeVoiceBreaks" had a z-score of -4.073, which was significantly higher than the threshold of 2.576 and resulted in the null hypothesis being rejected. With a z-score of -3.923, "FractionUnvoicedFrames" also demonstrated a clear difference between the groups. In addition, traits like "Harmonicity" had a z-score of 2.601, emphasising the divergence between the two groups and assisting in the rejection of the null hypothesis. A number of other measures, including various "Jitter" metrics, "MaxPitch," "MeanPeriod," "MeanPitch," "MedianPitch," "Shimmer(APQ11)," "StdDevPitch," and "UPDRS" scores, all displayed z-scores that noticeably exceeded the necessary values, emphasising the significance of these deviations.
 
 ### 4. Features selection
 
-To choose the most important characteristics for our investigation, we use a methodical combination of hypothesis testing and feature sorting. In the beginning, we do hypothesis testing and record the outcomes in the "reject_results.csv" file, either rejecting or failing to reject the null hypothesis. The features are then sorted using mean differences and confidence intervals, with the results being saved in the file "sorted_results.csv." We identify the features that consistently demonstrate importance through hypothesis testing and exhibit significant changes depending on sorting by using NumPy's np.intersect1d() function. We choose this selection for further investigation based on its shared characteristics. This strategy streamlines our analytical efforts by ensuring that we focus on qualities that regularly indicate relevance and distinctive traits. Ultimately, by concentrating on characteristics that consistently hold value across many analytical viewpoints, this technique improves the accuracy and robustness of our study.
+We employ a thorough combination of hypothesis testing and feature sorting to determine which traits are most crucial for our inquiry. As a first step, we test the null hypothesis and record the results in the "reject_results.csv" file, either rejecting it or failing to do so. After sorting the features with mean differences and confidence intervals, the results are stored in the file "sorted_results.csv." Using NumPy's np.intersect1d() method, we find the features that display substantial changes based on sorting and consistently indicate relevance through hypothesis testing. Based on its shared traits, we decided to investigate this pick further. This method simplifies our analytical processes by directing our attention to characteristics that consistently point to significance and distinguishing characteristics. In the end, this strategy enhances the accuracy and robustness of our study by focusing on traits that consistently have value across numerous analytical views.
 
-
-
-The following crucial characteristics are shared by feature sorting (with the top 10 mean differences) and null hypothesis rejection in our feature selection approach.
-
+In our feature selection strategy, feature sorting (with the top 10 mean differences) and null hypothesis rejection share the following important properties.
 
 - DegreeVoiceBreaks
 - FractionUnvoicedFrames
@@ -192,7 +191,8 @@ The final columns after all the analysis are;
 Next, we can use machine learning techniques for predictive modelling, and clinical validation to assess the reliability of identified PD to help the patients in early phases.  Also, We can predict the motor and the total UPDRS scores assigned by a physician to people with Parkinson’s Disease.
 
 ## Conclusion
-In this project, we systematically analyzed voice sample data to identify distinct acoustic markers for diagnosing Parkinson's Disease (PD), utilizing descriptive analyses, inferential statistical tests, and domain expertise. Through careful selection guided by hypothesis testing, mean difference calculations, and feature distribution visualizations, we determined that MaxPitch, StdDevPitch, UPDRS, Jitter(%), and the PD indicator exhibited consistent significance in distinguishing PD-affected individuals from healthy ones. This selection holds promise for the development of a non-invasive diagnostic tool, and while further validation and machine learning modelling are necessary, our project highlights the potential of voice analysis as a valuable avenue for early PD detection.
+In this effort, we used descriptive analysis, inferential statistical tests, and domain knowledge to comprehensively analyse voice sample data to find discrete acoustic indicators for diagnosing Parkinson's Disease (PD). We found that MaxPitch, StdDevPitch, UPDRS, Jitter(%), and the PD indicator exhibited consistent significance in differentiating PD-affected individuals from healthy individuals through careful selection guided by hypothesis testing, mean difference calculations, and feature distribution visualisations. Our experiment emphasises the potential of speech analysis as a useful method for early PD identification, even though more validation and machine learning models are required. This choice shows promise for the creation of a non-invasive diagnostic tool.
+
 
 ## References
 [^1^]: National Institute of Neurological Disorders and Stroke. (2023). Parkinson's Disease Information Page. [https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease](https://www.ninds.nih.gov/healthinformation/disorders/parkinsons-disease)
